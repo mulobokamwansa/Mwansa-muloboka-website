@@ -1,0 +1,68 @@
+Tailwind CSS provides a range of built-in breakpoints for responsive design. These breakpoints can be used to apply styles conditionally based on the viewport size. Here are the default media query breakpoints in Tailwind CSS:
+
+sm: Small devices (min-width: 640px)
+
+css
+@media (min-width: 640px) { ... }
+md: Medium devices (min-width: 768px)
+
+css
+@media (min-width: 768px) { ... }
+lg: Large devices (min-width: 1024px)
+
+css
+@media (min-width: 1024px) { ... }
+xl: Extra large devices (min-width: 1280px)
+
+css
+@media (min-width: 1280px) { ... }
+2xl: Double extra large devices (min-width: 1536px)
+
+css
+@media (min-width: 1536px) { ... }
+Using Tailwind CSS Breakpoints
+Tailwind CSS allows you to apply styles based on these breakpoints using prefixes. For example:
+
+html
+<div class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
+  Responsive text
+</div>
+In this example, the text size changes based on the viewport width:
+
+text-base for default
+
+sm:text-lg for small devices and up
+
+md:text-xl for medium devices and up
+
+lg:text-2xl for large devices and up
+
+xl:text-3xl for extra large devices and up
+
+2xl:text-4xl for double extra large devices and up
+
+Customizing Breakpoints
+You can also customize the default breakpoints in your Tailwind CSS configuration file (tailwind.config.js). Here's an example of how to customize breakpoints:
+
+javascript
+module.exports = {
+  theme: {
+    extend: {
+      screens: {
+        'xs': '480px',   // Custom breakpoint for extra small devices
+        '3xl': '1600px', // Custom breakpoint for triple extra large devices
+      },
+    },
+  },
+};
+Orientation Media Queries
+Tailwind CSS also supports orientation media queries:
+
+Landscape Mode: landscape:
+
+Portrait Mode: portrait:
+
+For example:
+
+html
+<div class="text-base landscape:text-lg portrait:text-sm">
