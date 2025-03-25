@@ -1,12 +1,13 @@
 import React from "react";
 import { CheckCircle2 } from "lucide-react";
 import CodeImage from "../../assets/codeImage.png";
+import CodeImage2 from "../../assets/developercode.gif";
 import { checklistItems } from "../constants";
 import { Mmotion } from "../../AminationProps"
 
 function Workflow() {
   return (
-    <div className="mt-20">
+    <div className="mt-6">
       <Mmotion>
       <h2
         className="text-3xl font-bold sm:text-5xl 
@@ -19,9 +20,10 @@ function Workflow() {
       </h2>
       </Mmotion>
       <Mmotion>
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center mt-14">
         <div className="p-2 w-full lg:w-1/2">
-          <img src={CodeImage} alt="" />
+          <img src={CodeImage} alt="" className="mt-6 border border-neutral-700 rounded-lg " />
+          <img src={CodeImage2} alt="" className="mt-10 border border-neutral-700 rounded-lg  "/>
         </div>
         <div className="p-12 w-full lg:w-1/2">
           {checklistItems.map((item, index) => (
